@@ -25,7 +25,7 @@ let joined = customers
 All four functions operate on an `Iterator<Item=L>` for LHS and accept an `Into<RHS<R>>`, which can take a slice `&[R]`. If you know your RHS is sorted according to your join condition, you can optionally create an explicitly ordered RHS:
 
 ```rust
-let orders = joinable::rhs::RHS::new_sorted(&orders[..]);
+let orders = joinable::RHS::new_sorted(&orders[..]);
 let joined = customers
     .iter()
     .inner_join(orders, |cust, ord| cust.id.cmp(&ord.customer_id));
