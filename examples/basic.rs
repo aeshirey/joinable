@@ -1,4 +1,4 @@
-use joinable::Joinable;
+use joinable::JoinableGrouped;
 
 fn main() {
     let customers = get_customers();
@@ -6,7 +6,7 @@ fn main() {
 
     let it = customers
         .into_iter()
-        .outer_join(&orders[..], |c, o| c.id.cmp(&o.customer_id));
+        .outer_join_grouped(&orders[..], |c, o| c.id.cmp(&o.customer_id));
 
     for (cust, ords) in it {
         if ords.is_empty() {
