@@ -1,10 +1,10 @@
 [package]
 name = "joinable"
-version = "0.1.0"
+version = "0.2.0-rc.1"
 authors = ["Adam Shirey <adam@shirey.ch>"]
 edition = "2021"
 
-description = "A trait for doing SQL-like joining iterables of values."
+description = "Traits for doing SQL-like joining iterables of values."
 readme = "README.md"
 homepage = "https://github.com/aeshirey/joinable/"
 repository = "https://github.com/aeshirey/joinable/"
@@ -14,3 +14,6 @@ keywords = ["join"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+[dev-dependencies]
+irisdata = "0.1"

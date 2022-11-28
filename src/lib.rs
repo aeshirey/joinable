@@ -4,7 +4,7 @@
 //!
 //! The `Joinable` trait lets you join left- and right-hand sides, yielding `(&L, &R)` for inner
 //! joins and `(&L, Option<&R>)` for outer joins:
-//! 
+//!
 //! ```
 //! # struct Customer { id: u32 }
 //! # struct Order { customer_id: u32 }
@@ -14,7 +14,7 @@
 //!
 //! let customers = get_customers();
 //! let orders = get_orders();
-//! 
+//!
 //! let it = customers
 //!     .iter()
 //!     .outer_join(&orders[..], |c, o| c.id.cmp(&o.customer_id));
@@ -56,7 +56,7 @@
 //! # fn get_customers() -> Vec<Customer> { Vec::new() }
 //! # fn get_orders() -> Vec<Order> { Vec::new() }
 //! use joinable::JoinableGrouped;
-//! 
+//!
 //! let customers = get_customers();
 //! let orders = get_orders();
 //!
